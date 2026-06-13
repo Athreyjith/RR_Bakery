@@ -2,11 +2,7 @@
   "name": "rr-bake-sweet",
   "private": true,
   "scripts": {
-    "build": "npm run build --prefix bakery-frontend",
-    "install:all": "npm install --prefix bakery-frontend && npm install --prefix bakery-backend"
-  },
-  "workspaces": [
-    "bakery-frontend",
-    "bakery-backend"
-  ]
+    "build": "npm --prefix bakery-frontend run build",
+    "vercel-install": "npm --prefix bakery-frontend ci && npm --prefix bakery-backend ci"
+  }
 }

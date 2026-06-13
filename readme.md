@@ -1,6 +1,7 @@
 # RR Bake & Sweet
 
 RR Bake & Sweet is a full-stack bakery web application with a React/Vite storefront and an Express/MongoDB API. It supports customer authentication, product browsing, admin product management, customer listing, and debt/payment tracking for bakery orders.
+<img width="1651" height="808" alt="bakery" src="https://github.com/user-attachments/assets/0bf7a56e-0b4e-4d8b-a5be-853418e11944" />
 
 ## Features
 
@@ -11,6 +12,8 @@ RR Bake & Sweet is a full-stack bakery web application with a React/Vite storefr
 - Admin customer listing
 - Admin debt management with payment history, partial payments, paid status, and summary data
 - Vite development proxy for frontend-to-backend API calls
+
+<img width="1655" height="822" alt="product" src="https://github.com/user-attachments/assets/87bf9a06-2ad1-40a5-bdc6-48750b96c998" />
 
 ## Tech Stack
 

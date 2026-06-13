@@ -1,6 +1,6 @@
 {
   "framework": "vite",
-  "installCommand": "npm install",
+  "installCommand": "npm run vercel-install",
   "buildCommand": "npm run build",
   "outputDirectory": "bakery-frontend/dist",
   "rewrites": [
