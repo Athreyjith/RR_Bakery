@@ -199,16 +199,28 @@ npm run preview
 
 ## Vercel Deployment
 
-This repository includes a root `vercel.json` that tells Vercel to deploy the Vite frontend from `bakery-frontend`.
+This repository includes a root `vercel.json` and a serverless API entry at `api/[...path].js`, so Vercel can deploy both the frontend and backend from one project.
 
 Use these settings if configuring the project manually in Vercel:
 
 ```text
 Framework Preset: Vite
-Install Command: cd bakery-frontend && npm install
-Build Command: cd bakery-frontend && npm run build
+Install Command: npm install
+Build Command: npm run build
 Output Directory: bakery-frontend/dist
 ```
+
+Add these environment variables in the Vercel project settings:
+
+```env
+MONGO_URI=your-mongodb-atlas-connection-string
+JWT_SECRET=replace-with-a-long-random-secret
+CLIENT_URL=https://your-vercel-domain.vercel.app
+```
+
+For MongoDB Atlas, allow network access from Vercel. The simplest option is allowing `0.0.0.0/0`, though a tighter production network policy is better when available.
+
+The frontend calls the backend through relative `/api` URLs, so no frontend API URL is needed when both are deployed in the same Vercel project.
 
 If Vercel shows `react-scripts: command not found`, the project is using Create React App settings. Switch the framework preset/build command to Vite or keep the included `vercel.json` in the repository.
 
