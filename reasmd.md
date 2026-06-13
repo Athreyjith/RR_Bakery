@@ -51,6 +51,8 @@ rr/
 install nom
 npm run dev
 
+## if u didnt set the Database
+ 
 ## 3. Reusable MongoDB Connection (`lib/dbConnect.js`)
 
 In serverless environments, standard `mongoose.connect()` will spawn a new connection on every request, quickly maxing out your database connection limits. You must cache the connection globally.
