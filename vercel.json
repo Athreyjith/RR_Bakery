@@ -1,0 +1,12 @@
+{
+  "framework": "vite",
+  "installCommand": "cd bakery-frontend && npm install",
+  "buildCommand": "cd bakery-frontend && npm run build",
+  "outputDirectory": "bakery-frontend/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

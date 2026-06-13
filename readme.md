@@ -197,6 +197,21 @@ npm run preview
 - The password reset flow currently returns/logs the reset URL and uses placeholder SMTP credentials. Configure real mail transport settings before using it in production.
 - Ensure the frontend API path is routed to the backend. For a split deployment, configure a reverse proxy or update API base URL behavior as needed.
 
+## Vercel Deployment
+
+This repository includes a root `vercel.json` that tells Vercel to deploy the Vite frontend from `bakery-frontend`.
+
+Use these settings if configuring the project manually in Vercel:
+
+```text
+Framework Preset: Vite
+Install Command: cd bakery-frontend && npm install
+Build Command: cd bakery-frontend && npm run build
+Output Directory: bakery-frontend/dist
+```
+
+If Vercel shows `react-scripts: command not found`, the project is using Create React App settings. Switch the framework preset/build command to Vite or keep the included `vercel.json` in the repository.
+
 ## Development Tips
 
 - Keep both apps running during local development: backend on `8080`, frontend on `5173`.
